@@ -1,3 +1,8 @@
+const fs = require('fs')
+// const update = require('./updater.js')
+
+/// Load API w/ key
+const apiKey = fs.readFileSync('./apiKey.txt').toString()
 const api = require('etherscan-api').init(apiKey)
 
 /// @return Promise of transaction data in JSON format
